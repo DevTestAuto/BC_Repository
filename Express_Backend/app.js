@@ -289,6 +289,7 @@ app.listen(3210, () => {
     console.log('Server started successfully on port 3210')
 });
 
+// This method is used to handle date display
 function dateDisplayed(timestamp) {
     var date = new Date(timestamp);
     return (date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear());
