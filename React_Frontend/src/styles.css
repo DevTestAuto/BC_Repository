@@ -1,0 +1,122 @@
+.ui.dropdown>.default.text {
+  color: #898ba0;
+}
+
+#login-bg {
+  background-image: linear-gradient(45deg, #492e83,#31296a, #184ea2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#login-div {
+  background-image: url("./images/Block-chain-logo.png");
+  background-repeat: no-repeat;
+  position:fixed;
+  top: 48%;
+  left: 45%;
+  width:100%;
+  height:100%;
+  margin-top: -17.8125em; /*set to a negative number 1/2 of your height*/
+  margin-left: -31.719em; /*set to a negative number 1/2 of your width*/
+}
+
+#header-bg {
+  background-image: linear-gradient(90deg, #492e83,#31296a, #184ea2);
+  height: auto;
+  width: 100%;
+  padding-right: 25px;
+}
+
+.ui.avatar.image, .ui.avatar.image img, .ui.avatar.image svg, .ui.avatar.images .image, .ui.avatar.images img, .ui.avatar.images svg {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.min-height {
+  min-height:397px;
+}
+
+.ui.table thead tr:first-child > th {
+  position: sticky !important;
+  top: 0;
+  z-index: 2;
+}
+
+.react-tabs__tab--selected {
+  background: #dadce9 !important;
+  border-color: #c8cad6 !important;
+  color: black !important;
+  border-radius: 0 !important;  
+}
+
+.react-tabs__tab-list {
+  border-bottom: none !important;
+  margin: 0px 20px 0px !important;
+}
+
+.react-tabs__tab {
+  padding: 7px 12px !important; 
+}
+
+.ui.form textarea, .ui.textarea {
+  margin: 0;
+  -webkit-appearance: none;
+  tap-highlight-color: rgba(255,255,255,0);
+  padding: .78571em 1em;
+  background: #fff;
+  border: 1px solid rgba(39,41,43,.15);
+  outline: 0;
+  color: rgba(0,0,0,.8);
+  border-radius: .2857rem;
+  box-shadow: 0 0 0 0 transparent inset;
+  -webkit-transition: background-color .2s ease,color .2s ease,box-shadow .2s ease,border-color .2s ease;
+  transition: background-color .2s ease,color .2s ease,box-shadow .2s ease,border-color .2s ease;
+  font-size: 1em;
+  height: 12em;
+  min-height: 4.5em;
+  max-height: 24em;
+  line-height: 1.2857;
+  resize: vertical;
+}
+
+.ui.steps .active.step .icon {
+  color: #009fda;
+} 
+
+.lable_head{
+  color: #878787;
+  font-size: 16px;
+  width: 215px;
+}
+
+.margin_top{
+  height: 26px;
+}
+
+.table_clumn{
+  color:#3f3f3f;
+  padding-left: 23px;
+  font-size: 16px;
+}
+
+.comp_row {
+  display: flex;
+}
+
+.comp_column {
+  flex: 33.33%;
+  margin: 8px;
+  border: 1px solid rgb(228, 228, 228);
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+.ui.vertical.menu .item:before {
+  height: 0px !important;
+}
+
+.ui.selection.visible.dropdown .menu {
+  height: 115px !important;
+}
