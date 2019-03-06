@@ -226,7 +226,7 @@ app.post('/addCompReq', function (req, res) {
     });
 });
 
-
+// This method is used to handle company update request
 app.post('/editCompReq/:cid', function (req, res) {
     var data = {
         comp_name: req.body.comp_name, comp_type: req.body.comp_type,
@@ -246,7 +246,7 @@ app.post('/editCompReq/:cid', function (req, res) {
     });
 });
 
-// This method is used to handle update request
+// This method is used to handle employee update request
 app.post('/UpdateReq/:eid/:cid', function (req, res) {
     var data = {
         
