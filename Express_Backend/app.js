@@ -285,43 +285,6 @@ app.post('/UpdateReq/:eid/:cid', function (req, res) {
     });
 });
 
-// app.post('/InsertReq', function (req, res) {
-//     var data = {
-//         emp_uid: req.body.emp_uid, emp_id: req.body.emp_id,
-//         emp_fname: req.body.emp_fname, emp_lname: req.body.emp_lname,
-//         emp_fathername: req.body.emp_fathername, emp_avatar: req.body.emp_avatar,
-//         gender: req.body.gender, date_of_birth: req.body.date_of_birth,
-//         qualification: req.body.qualification, pan_number: req.body.pan_number,
-//         date_of_joining: req.body.date_of_joining, relieving_date: req.body.relieving_date,
-//         emp_type: req.body.emp_type, exit_type: req.body.exit_type,
-//         designation: req.body.designation, tech_expertise: req.body.tech_expertise,
-//         flag_verification: req.body.flag_verification, mgmt_status: req.body.mgmt_status,
-//         mgr_status: req.body.mgr_status, bc_status: req.body.bc_status,
-//         comp_id: req.body.comp_id, bc_count: req.body.bc_count,
-//         created_date: req.body.created_date, modified_date: req.body.modified_date
-//     };
-
-//     var sql = 'INSERT INTO tbl_employee SET ?';
-//     db.query(sql, data, (err, result) => {
-//         if (err) throw err;
-//         res.send({
-//             status: 'Data send successfully!',
-//             emp_uid: req.body.emp_uid, emp_id: req.body.emp_id,
-//             emp_fname: req.body.emp_fname, emp_lname: req.body.emp_lname,
-//             emp_fathername: req.body.emp_fathername, emp_avatar: req.body.emp_avatar,
-//             gender: req.body.gender, date_of_birth: req.body.date_of_birth,
-//             qualification: req.body.qualification, pan_number: req.body.pan_number,
-//             date_of_joining: req.body.date_of_joining, relieving_date: req.body.relieving_date,
-//             emp_type: req.body.emp_type, exit_type: req.body.exit_type,
-//             designation: req.body.designation, tech_expertise: req.body.tech_expertise,
-//             flag_verification: req.body.flag_verification, mgmt_status: req.body.mgmt_status,
-//             mgr_status: req.body.mgr_status, bc_status: req.body.bc_status,
-//             comp_id: req.body.comp_id, bc_count: req.body.bc_count,
-//             created_date: req.body.created_date, modified_date: req.body.modified_date
-//         });
-//     });
-// });
-
 app.listen(3210, () => {
     console.log('Server started successfully on port 3210')
 });
