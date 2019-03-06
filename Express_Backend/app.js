@@ -246,6 +246,7 @@ app.post('/editCompReq/:cid', function (req, res) {
     });
 });
 
+// This method is used to handle update request
 app.post('/UpdateReq/:eid/:cid', function (req, res) {
     var data = {
         
