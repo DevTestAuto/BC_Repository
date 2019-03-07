@@ -260,7 +260,7 @@ class BlockChainData extends Component {
    */
     getRecordCount = async () => {
         const { employee } = this.props;
-        var url = 'http://192.168.10.40:3210/recordCount/' + employee.emp_uid;
+        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/recordCount/' + employee.emp_uid;
         axios.get(url)
             .then((empData) => {
                 if (empData.data[0].totalCount > empData.data[0].bcCount) {
