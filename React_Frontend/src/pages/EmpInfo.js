@@ -119,7 +119,7 @@ class EmpInfo extends Component {
   * This method is used to fetch companies list from the database.
   */
   getCompaniesList() {
-    var url = 'http://192.168.10.40:3210/compList';
+    var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/compList';
     axios.get(url)
         .then((compList) => {
             console.log(compList.data);
@@ -133,7 +133,7 @@ class EmpInfo extends Component {
 
     renderSearch = async () => {
         if (this.state.searchuid !== "" && this.state.searchuid.length > 0) {
-            var url = 'http://192.168.10.40:3210/search/' + this.state.searchuid + '/' + this.state.company_id;
+            var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/search/' + this.state.searchuid + '/' + this.state.company_id;
             axios.get(url)
                 .then((empData) => {
                     this.setState({
@@ -155,7 +155,7 @@ class EmpInfo extends Component {
      * This method is used to fetch the employee data from the database.
      */
     getEmpData(comp) {
-        var url = 'http://192.168.10.40:3210/data/' + comp;
+        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/data/' + comp;
         axios.get(url)
             .then((empData) => {
                 console.log(empData.data);
