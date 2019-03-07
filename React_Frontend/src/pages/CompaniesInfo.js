@@ -23,7 +23,7 @@ class CompaniesInfo extends Component {
      * This method is used to fetch the companies data from the database.
      */
     getCompaniesList = () => {
-        var url = 'http://192.168.10.40:3210/getCompList';
+        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/getCompList';
         axios.get(url)
             .then((compList) => {
                 console.log(compList.data);
