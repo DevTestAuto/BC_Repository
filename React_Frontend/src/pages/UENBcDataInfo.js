@@ -68,7 +68,7 @@ class UENBcDataInfo extends Component {
      * This method is used to fetch the employee data from the database.
      */
     getEmpData(emp_uid) {
-        var url = 'http://192.168.10.40:3210/fetchBCData/' + emp_uid;
+        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/fetchBCData/' + emp_uid;
         axios.get(url)
             .then((empData) => {
                 //  console.log(empData.data[0]);
