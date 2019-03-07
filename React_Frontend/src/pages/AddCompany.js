@@ -33,7 +33,7 @@ class AddCompany extends Component {
      */
     addCompany() {
         const { companyName, compType, website } = this.state;
-        var url = 'http://192.168.10.40:3210/addCompReq';
+        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/addCompReq';
         axios.post(url, {
             comp_name: companyName,
             comp_type: compType,
