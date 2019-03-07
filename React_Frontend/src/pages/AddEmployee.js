@@ -101,7 +101,7 @@ class AddEmployee extends Component {
      * This method is used to fetch the employee record count from the database.
      */
     getEmpCount() {
-        var url = 'http://192.168.10.40:3210/data/';
+        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/data/';
         axios.get(url)
             .then((recordCount) => {
                 console.log(recordCount.data[0].count);
@@ -129,7 +129,7 @@ class AddEmployee extends Component {
         } else {
             gender = 2;
         }
-        var url = 'http://192.168.10.40:3210/checkDuplicate/' + firstName + '/' + lastName + '/' + fatherName + '/' + gender + '/' + dateOfBirth + '/' + panNo;
+        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/checkDuplicate/' + firstName + '/' + lastName + '/' + fatherName + '/' + gender + '/' + dateOfBirth + '/' + panNo;
         axios.get(url)
             .then((empData) => {
                 console.log(empData.data);
@@ -149,7 +149,7 @@ class AddEmployee extends Component {
      * This method is used to fetch the employee unique id from the database.
      */
     getEmpUid() {
-        var url = 'http://192.168.10.40:3210/euid/';
+        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/euid/';
         axios.get(url)
             .then((empData) => {
                 console.log(empData.data);
@@ -329,7 +329,7 @@ class AddEmployee extends Component {
     */
     getExistingEmployee = async () => {
         const { empNumber } = this.state;
-        var selQuery = 'http://192.168.10.40:3210/data/' + empNumber + '/' + this.props.location.state.companyName;
+        var selQuery = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/data/' + empNumber + '/' + this.props.location.state.companyName;
         axios.get(selQuery).then((empData) => {
             if (empData.data.length > 0) {
                 if (empData.data[0].emp_id !== null) {
@@ -397,7 +397,7 @@ class AddEmployee extends Component {
             } else if (values === "No") {
                 verifFlag = "2";
             }
-            var url = 'http://192.168.10.40:3210/InsertReq/' + fromDate + "/" + empUEN;
+            var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/InsertReq/' + fromDate + "/" + empUEN;
             axios.post(url, {
                 emp_uid: empUEN,
                 emp_id: empNumber,
@@ -486,7 +486,7 @@ class AddEmployee extends Component {
             this.setState({ errorMessage: 'Please enter valid Unique Employee Number' })
             this.setState({ empNumber: '', firstName: '', lastName: '', fatherName: '', dateOfBirth: '', qualification: '', panNo: '', value: '', imgUrl: '', imgIpfsHash: '' });
         } else {
-            var url = 'http://192.168.10.40:3210/fetchUidData/' + this.state.empUEN;
+            var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/fetchUidData/' + this.state.empUEN;
             axios.get(url)
                 .then((empData) => {
                     console.log("empdata", empData);
