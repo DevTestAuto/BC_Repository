@@ -45,7 +45,7 @@ class EditCompany extends Component {
    * This method is used to fetch the selected employee data from the database
    */
     getEditCompData() {
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/getCompData/' + this.props.location.state.comp_id;
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/getCompData/' + this.props.location.state.comp_id;
         axios.get(url).then((compData) => {
 
             console.log(compData.data);
@@ -85,7 +85,7 @@ class EditCompany extends Component {
             status = 2;
         }
 
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/editCompReq/' + this.props.location.state.comp_id;
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/editCompReq/' + this.props.location.state.comp_id;
         axios.post(url, {
             comp_name: companyName,
             comp_type: compType,
