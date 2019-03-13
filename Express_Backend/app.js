@@ -7,7 +7,7 @@ const cors = require('cors');
 app.use(bodyParser.json());
 app.use(cors());
 const db = mysql.createConnection({
-    host: 'bcemploymentinformationsystem.cnql3fsruc3y.us-east-1.rds.amazonaws.com',
+    host: 'bcemploymentinformationsystem.cuflq5yqlhrp.us-west-2.rds.amazonaws.com',
     user: 'admin',
     password: 'admin123',
     database: 'BCEmploymentInformationSystem'
