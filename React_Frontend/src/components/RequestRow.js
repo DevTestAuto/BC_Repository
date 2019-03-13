@@ -230,7 +230,7 @@ class RequestRow extends Component {
         this.handleClose();
         this.setState({ loading: true });
         this.loadingShow();
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/UpdateReq/' + employee.emp_id + '/' + employee.comp_id;
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/UpdateReq/' + employee.emp_id + '/' + employee.comp_id;
         axios.post(url, {
             emp_uid: employee.emp_uid,
             emp_id: employee.emp_id,
@@ -276,7 +276,7 @@ class RequestRow extends Component {
         this.handleClose();
         this.setState({ loading: true });
         this.loadingShow();
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/UpdateReq/' + employee.emp_id + '/' + employee.comp_id;
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/UpdateReq/' + employee.emp_id + '/' + employee.comp_id;
         axios.post(url, {
             emp_uid: employee.emp_uid,
             emp_id: employee.emp_id,
@@ -320,7 +320,7 @@ class RequestRow extends Component {
     * This method is used to handle the updating blockchain status in DB.
     */
     updateBlockChainStatus = async (employee) => {
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/UpdateReq/' + employee.emp_id + '/' + employee.comp_id;
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/UpdateReq/' + employee.emp_id + '/' + employee.comp_id;
         axios.post(url, {
             emp_uid: employee.emp_uid,
             emp_id: employee.emp_id,
