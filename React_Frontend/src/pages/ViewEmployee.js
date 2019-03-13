@@ -60,7 +60,7 @@ class EditEmployee extends Component {
     * This method is used to fetch the selected employee data from the database
     */
     getEmpData() {
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/data/' + this.props.location.state.emp_id + '/' + this.props.location.state.companyName;
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/data/' + this.props.location.state.emp_id + '/' + this.props.location.state.companyName;
         axios.get(url).then((empData) => {
             console.log(empData.data);
             if (empData.data.length > 0) {
