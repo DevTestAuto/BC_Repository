@@ -82,7 +82,7 @@ class Dashboard extends Component {
      * This method is used to fetch active companies list from the database.
      */
     getCompaniesList() {
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/activeCompList';
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/activeCompList';
         axios.get(url)
             .then((compList) => {
                 console.log(compList.data);
@@ -96,7 +96,7 @@ class Dashboard extends Component {
      * This method is used to fetch the companies count from the database.
      */
     getCompaniesCount() {
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/cmpCount/';
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/cmpCount/';
         axios.get(url)
             .then((cmpCount) => {
                 console.log(cmpCount.data[0].count);
@@ -111,7 +111,7 @@ class Dashboard extends Component {
      * This method is used to fetch the companies count from the database.
      */
     getbcEmpCount() {
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/bcEmpCount/';
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/bcEmpCount/';
         axios.get(url)
             .then((empCount) => {
                 console.log(empCount.data[0].count);
