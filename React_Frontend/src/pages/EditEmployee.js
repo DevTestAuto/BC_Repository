@@ -95,7 +95,7 @@ class EditEmployee extends Component {
     * This method is used to fetch the selected employee data from the database
     */
     getEmpData() {
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/data/' + this.props.location.state.emp_id + '/' + this.props.location.state.companyName;
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/data/' + this.props.location.state.emp_id + '/' + this.props.location.state.companyName;
         axios.get(url).then((empData) => {
             console.log(empData.data);
             if (empData.data.length > 0) {
@@ -207,9 +207,9 @@ class EditEmployee extends Component {
         var url = '';
         const { firstName, lastName, fatherName, value, dateOfBirth, panNo } = this.state;
         if (value === 'Male') {
-            url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/checkDuplicate/' + firstName + '/' + lastName + '/' + fatherName + '/1/' + dateOfBirth + '/' + panNo;
+            url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/checkDuplicate/' + firstName + '/' + lastName + '/' + fatherName + '/1/' + dateOfBirth + '/' + panNo;
         } else {
-            url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/checkDuplicate/' + firstName + '/' + lastName + '/' + fatherName + '/2/' + dateOfBirth + '/' + panNo;
+            url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/checkDuplicate/' + firstName + '/' + lastName + '/' + fatherName + '/2/' + dateOfBirth + '/' + panNo;
         }
         axios.get(url)
             .then((empData) => {
@@ -477,7 +477,7 @@ class EditEmployee extends Component {
             this.state.values = "2";
         }
 
-        var url = 'http://ec2-3-84-93-231.compute-1.amazonaws.com:3210/UpdateReq/' + this.props.location.state.emp_id + '/' + this.props.location.state.companyName;
+        var url = 'http://ec2-34-209-178-145.us-west-2.compute.amazonaws.com:3210/UpdateReq/' + this.props.location.state.emp_id + '/' + this.props.location.state.companyName;
         axios.post(url, {
             emp_uid: empUEN,
             emp_id: empNumber,
