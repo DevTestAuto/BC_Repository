@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: 'bcemploymentinformationsystem.cuflq5yqlhrp.us-west-2.rds.amazonaws.com',
     user: 'admin',
     password: 'admin123',
-    database: 'BCEmploymentInformationSystem'
+    database: 'bcemploymentinformationsystem'
 });
 
 db.connect();
